@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','HomeController@index')->name('front.index');
 
-// 會員登入
+// 登入
 Route::get('login', 'LoginController@index')->defaults('_config', [
     'view' => 'front.login'
 ])->name('front.login');
@@ -24,7 +24,7 @@ Route::post('login', 'LoginController@login')->defaults('_config', [
     'redirect' => 'front.dashboard'
 ])->name('front.login.store');
 
-// 會員註冊
+// 建立帳號
 Route::get('register', 'RegisterController@index')->defaults('_config', [
     'view' => 'front.register'
 ])->name('front.register');
@@ -33,7 +33,7 @@ Route::post('register', 'RegisterController@store')->defaults('_config', [
     'redirect' => 'front.register.success'
 ])->name('front.register.store');
 
-// 註冊成功畫面
+// 建立成功畫面
 Route::get('success', 'RegisterController@success')->defaults('_config', [
     'view' => 'front.success'
 ])->name('front.register.success');
