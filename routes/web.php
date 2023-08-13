@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// 回首頁
 Route::get('/','HomeController@index')->name('front.index');
 
 // 登入
